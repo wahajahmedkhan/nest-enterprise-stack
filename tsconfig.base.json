@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nest-enterprise-stack/shell-text-analysis/file-reader": [
+        "libs/shell-text-analysis/file-reader/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
