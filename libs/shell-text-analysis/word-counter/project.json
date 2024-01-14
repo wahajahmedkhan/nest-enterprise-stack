@@ -1,0 +1,20 @@
+{
+  "name": "shell-text-analysis-word-counter",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shell-text-analysis/word-counter/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/shell-text-analysis/word-counter/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
