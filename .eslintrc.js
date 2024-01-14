@@ -5,6 +5,10 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: './tsconfig.base.json',
+      },
       extends: [
         'plugin:@nx/typescript',
         'eslint:recommended',
