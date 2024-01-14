@@ -18,6 +18,9 @@
       "@nest-enterprise-stack/shell-text-analysis/file-reader": [
         "libs/shell-text-analysis/file-reader/src/index.ts"
       ],
+      "@nest-enterprise-stack/shell-text-analysis/report-generator": [
+        "libs/shell-text-analysis/report-generator/src/index.ts"
+      ],
       "@nest-enterprise-stack/shell-text-analysis/word-counter": [
         "libs/shell-text-analysis/word-counter/src/index.ts"
       ]
