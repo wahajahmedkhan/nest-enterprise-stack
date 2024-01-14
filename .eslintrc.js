@@ -14,6 +14,7 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:nestjs/recommended',
+        'plugin:promise/recommended',
         'prettier',
       ],
       plugins: [
@@ -26,6 +27,7 @@ module.exports = {
         'rxjs',
         'nestjs',
         'security',
+        'promise',
       ],
       rules: {
         'nestjs/use-validation-pipe': 'error',
@@ -231,7 +233,6 @@ module.exports = {
         'security/detect-non-literal-fs-filename': 'error',
         'security/detect-object-injection': 'error',
         'no-sync': 'warn',
-        'prefer-async-await': 'error',
         'max-depth': ['error', 4],
         'max-lines-per-function': ['error', 50],
         'max-params': ['error', 4],
