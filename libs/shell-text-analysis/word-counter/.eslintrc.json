@@ -1,5 +1,12 @@
 {
   "extends": ["../../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
-  "overrides": []
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["libs/shell-text-analysis/word-counter/tsconfig.*?.json"]
+      }
+    }
+  ]
 }
