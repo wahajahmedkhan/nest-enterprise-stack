@@ -1,1 +1,1 @@
-export * from './lib/shell-text-analysis-file-reader';
+export * from './lib/file-reader';

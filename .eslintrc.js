@@ -58,6 +58,14 @@ module.exports = {
                 ],
               },
               {
+                sourceTag: 'type:lib',
+                onlyDependOnLibsWithTags: [
+                  'type:util',
+                  'type:type',
+                  'type:data-access',
+                ],
+              },
+              {
                 sourceTag: 'type:data-access',
                 onlyDependOnLibsWithTags: [
                   'type:util',

@@ -63,5 +63,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:text-analysis-tool", "type:app"]
 }

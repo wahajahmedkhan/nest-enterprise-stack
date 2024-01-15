@@ -16,5 +16,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:shell-text-analysis-tool", "type:lib"]
 }
