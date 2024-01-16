@@ -19,6 +19,9 @@
       "@nest-enterprise-stack/shared/database/memory": [
         "libs/shared/database/memory/src/index.ts"
       ],
+      "@nest-enterprise-stack/shell-text-analysis/analyze-text-files": [
+        "libs/shell-text-analysis/analyze-text-files/src/index.ts"
+      ],
       "@nest-enterprise-stack/shell-text-analysis/data-access": [
         "libs/shell-text-analysis/data-access/src/index.ts"
       ],

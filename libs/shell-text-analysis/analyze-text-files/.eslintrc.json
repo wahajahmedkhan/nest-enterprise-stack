@@ -1,0 +1,14 @@
+{
+  "extends": ["../../../.eslintrc.js"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": [
+          "libs/shell-text-analysis/analyze-text-files/tsconfig.*?.json"
+        ]
+      }
+    }
+  ]
+}

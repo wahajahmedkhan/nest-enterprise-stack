@@ -67,6 +67,10 @@ module.exports = {
                 ],
               },
               {
+                sourceTag: 'type:shell',
+                onlyDependOnLibsWithTags: ['type:lib'],
+              },
+              {
                 sourceTag: 'type:data-access',
                 onlyDependOnLibsWithTags: [
                   'type:util',

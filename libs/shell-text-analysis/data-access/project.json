@@ -16,5 +16,5 @@
       }
     }
   },
-  "tags": ["scope:shell-text-analysis-tool", "type:data-access"]
+  "tags": ["scope:shell-text-analysis", "type:data-access"]
 }

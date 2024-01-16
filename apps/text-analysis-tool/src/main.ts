@@ -1,5 +1,4 @@
-import { fileReader } from '@nest-enterprise-stack/shell-text-analysis/file-reader';
-import { wordCounter } from '@nest-enterprise-stack/shell-text-analysis/word-counter';
+import { shellAnalyzeTextFiles } from '@nest-enterprise-stack/shell-text-analysis/analyze-text-files';
 import { Command } from 'commander';
 const program = new Command();
 
@@ -11,11 +10,11 @@ program
 program
   .argument('<directory>', 'directory to analyze text files')
   .argument('<number>', 'number of top frequent words to report', parseInt)
-  .action(async (directory, number) => {
+  .action(async (directory, rows) => {
     console.log(`Analyzing files in: ${directory}`);
-    console.log(`Reporting top ${number} words`);
+    console.log(`Reporting top ${rows} words`);
 
-    console.log(await wordCounter(await fileReader(directory)));
+    await shellAnalyzeTextFiles(directory, rows);
 
     // Call your text analysis function here
     // analyzeTextFiles(directory, number);
