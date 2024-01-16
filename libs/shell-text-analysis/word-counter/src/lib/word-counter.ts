@@ -1,19 +1,9 @@
-import {
-  closeMemoryDb,
-  connectToMemoryDb,
-} from '@nest-enterprise-stack/shared/database/memory';
-import {
-  addWordCountToTable,
-  initiliazeWordCountTable,
-} from '@nest-enterprise-stack/shell-text-analysis/data-access';
+import { addWordCountToTable } from '@nest-enterprise-stack/shell-text-analysis/data-access';
 import { mapSync, split } from 'event-stream';
 import { createReadStream } from 'fs';
 import { Database } from 'sqlite3';
 
-export async function wordCounter(filePaths: Array<string>) {
-  const db = connectToMemoryDb();
-  await initiliazeWordCountTable(db);
-
+export async function wordCounter(db: Database, filePaths: Array<string>) {
   for (const filePath of filePaths) {
     await new Promise<void>((resolve, reject) => {
       createReadStream(filePath, 'utf8')
@@ -28,22 +18,21 @@ export async function wordCounter(filePaths: Array<string>) {
         );
     });
   }
-
-  closeMemoryDb(db);
 }
 
-async function processLine(line: string, db: Database) {
+function processLine(line: string, db: Database) {
   const words = line.split(/\s+/g);
   const minimumWordLength = 2;
-  for (const word of words) {
+
+  return words.map(word => {
     const normalizedWord = word.toLowerCase().replace(/[^a-z]/g, '');
     if (
       normalizedWord.length > minimumWordLength &&
       !isCommonWord(normalizedWord)
     ) {
-      await addWordCountToTable(db, word);
+      return addWordCountToTable(db, word);
     }
-  }
+  });
 }
 
 function isCommonWord(word: string) {

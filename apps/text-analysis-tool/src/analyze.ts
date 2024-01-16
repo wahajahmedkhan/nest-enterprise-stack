@@ -15,9 +15,6 @@ program
     console.log(`Reporting top ${rows} words`);
 
     await shellAnalyzeTextFiles(directory, rows);
-
-    // Call your text analysis function here
-    // analyzeTextFiles(directory, number);
   });
 
 program.parse(process.argv);

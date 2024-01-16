@@ -7,7 +7,6 @@ export function clearWordCountTable(db: Database): Promise<void> {
         console.error('Error clearing the table:', err);
         reject(err);
       } else {
-        console.log('Previous records cleared.');
         resolve();
       }
     });

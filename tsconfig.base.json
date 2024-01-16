@@ -31,6 +31,9 @@
       "@nest-enterprise-stack/shell-text-analysis/report-generator": [
         "libs/shell-text-analysis/report-generator/src/index.ts"
       ],
+      "@nest-enterprise-stack/shell-text-analysis/types": [
+        "libs/shell-text-analysis/types/src/index.ts"
+      ],
       "@nest-enterprise-stack/shell-text-analysis/word-counter": [
         "libs/shell-text-analysis/word-counter/src/index.ts"
       ]

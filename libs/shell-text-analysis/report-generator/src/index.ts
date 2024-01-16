@@ -1,1 +1,1 @@
-export * from './lib/shell-text-analysis-report-generator';
+export * from './lib/report-generator';

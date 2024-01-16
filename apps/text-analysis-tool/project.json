@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/text-analysis-tool",
         "format": ["cjs"],
         "bundle": false,
-        "main": "apps/text-analysis-tool/src/main.ts",
+        "main": "apps/text-analysis-tool/src/analyze.ts",
         "tsConfig": "apps/text-analysis-tool/tsconfig.app.json",
         "assets": ["apps/text-analysis-tool/src/assets"],
         "generatePackageJson": true,
