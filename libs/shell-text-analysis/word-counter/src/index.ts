@@ -1,1 +1,1 @@
-export * from './lib/shell-text-analysis-word-counter';
+export * from './lib/word-counter';

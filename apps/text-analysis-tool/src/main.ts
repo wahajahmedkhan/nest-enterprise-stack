@@ -1,4 +1,5 @@
 import { fileReader } from '@nest-enterprise-stack/shell-text-analysis/file-reader';
+import { wordCounter } from '@nest-enterprise-stack/shell-text-analysis/word-counter';
 import { Command } from 'commander';
 const program = new Command();
 
@@ -14,7 +15,7 @@ program
     console.log(`Analyzing files in: ${directory}`);
     console.log(`Reporting top ${number} words`);
 
-    console.log(await fileReader(directory));
+    console.log(await wordCounter(await fileReader(directory)));
 
     // Call your text analysis function here
     // analyzeTextFiles(directory, number);

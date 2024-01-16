@@ -1,4 +1,4 @@
-import { shellTextAnalysisWordCounter } from './shell-text-analysis-word-counter';
+import { shellTextAnalysisWordCounter } from './word-counter';
 
 describe('shellTextAnalysisWordCounter', () => {
   it('should work', () => {

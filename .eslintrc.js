@@ -63,6 +63,7 @@ module.exports = {
                   'type:util',
                   'type:type',
                   'type:data-access',
+                  'type:database',
                 ],
               },
               {
@@ -72,6 +73,10 @@ module.exports = {
                   'type:type',
                   'type:data-access',
                 ],
+              },
+              {
+                sourceTag: 'type:database',
+                onlyDependOnLibsWithTags: [],
               },
               {
                 sourceTag: 'type:e2e',

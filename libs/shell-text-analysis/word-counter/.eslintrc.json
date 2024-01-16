@@ -4,6 +4,9 @@
   "overrides": [
     {
       "files": ["*.ts"],
+      "rules": {
+        "security/detect-non-literal-fs-filename": "off"
+      },
       "parserOptions": {
         "project": ["libs/shell-text-analysis/word-counter/tsconfig.*?.json"]
       }
